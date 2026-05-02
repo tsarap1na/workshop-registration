@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workshop Registration</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div id="wizard" class="wizard">
+        <div class="wizard-header">
+          <div id="step-indicator" class="step-indicator"></div>
+          <h2 id="step-title" class="step-title"></h2>
+        </div>
+
+        <div class="wizard-body">
+          <div id="fields-container" class="fields-container"></div>
+          <div id="review-container" class="review-container"></div>
+        </div>
+
+        <div id="status-block" class="status-block"></div>
+
+        <div class="wizard-footer">
+          <button id="btn-back" class="btn btn--secondary">Back</button>
+          <button id="btn-next" class="btn btn--primary">Next</button>
+          <button id="btn-submit" class="btn btn--submit">Submit Registration</button>
+        </div>
+      </div>
+
+      <div id="success-screen" class="result-screen result-screen--success">
+        <div class="result-icon">✓</div>
+        <h2>Registration Successful!</h2>
+        <p>Your registration has been received.</p>
+        <p class="result-id">Request ID: <span id="request-id"></span></p>
+        <button id="btn-try-again" class="btn btn--secondary">Register Another</button>
+      </div>
+
+      <div id="error-screen" class="result-screen result-screen--error">
+        <div class="result-icon">✕</div>
+        <h2>Something went wrong</h2>
+        <p id="error-message"></p>
+        <button id="btn-try-again-err" class="btn btn--secondary">Try Again</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
